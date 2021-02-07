@@ -1,0 +1,4 @@
+<script>
+    $(".cwbr-con").find("li .openmusic").click(function () { var audio = $(this).parent().siblings().find("audio").prevObject[3]; audio.play(); $(this).parent().siblings(".cc-icon-close").css({"display":"block"}); $(this).parent().siblings(".cc-icon-player").css({"display":"block"}); $(this).parent(".cc-icon-open").css({"display":"none"}); })
+    $(".cwbr-con").find("li .pauseAuto").click(function () { var audio = $(this).parent().siblings().find("audio").prevObject[3]; audio.pause(); $(this).parent().siblings(".cc-icon-open").css({"display":"block"}); $(this).parent().siblings(".cc-icon-player").css({"display":"none"}); $(this).parent(".cc-icon-close").css({"display":"none"}); })
+</script>

@@ -1,0 +1,349 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>AI8120的主页</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="keywords" content="AI8120的主页" />
+<meta name="description" content="AI8120的主页" />
+<link rel="stylesheet" href="css/metro.css">
+<link rel="stylesheet" href="css/live2d.css" />
+<script>
+var mobileUrl = 'indexpe.html';
+var mobileAgent = new Array("iphone", "ipod", "ipad", "android", "mobile", "blackberry", "webos", "incognito", "webmate", "bada", "nokia", "lg", "ucweb", "skyfire");
+var browser = navigator.userAgent.toLowerCase(); 
+var isMobile = false; 
+for (var i=0; i<mobileAgent.length; i++){
+    if (browser.indexOf(mobileAgent[i])!=-1){ 
+        isMobile = true; 
+        break;
+    }
+}
+if(isMobile){
+    location.href = mobileUrl;
+}
+</script>
+<script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
+<!--解决在ie6下png透明-->
+<!--[if IE 6]>
+	<script type="text/javascript" src="js/DD_belatedPNG.js" ></script>	
+	<script type="text/javascript">
+	DD_belatedPNG.fix('ul,li,img');
+	</script>
+<![endif]-->
+<script type="text/javascript" src="js/jquery.carousel.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		var box_h=$("#metro_box").height();
+		var box_w=$("#metro_box").width();
+		$("#metro_box").css("margin-top",(($(window).height()-box_h)/2)-10+"px");
+		//var img_h=$(".arr_left img").height();
+		//var img_w=$(".arr_left img").width();
+		//$(".prev").css("position","absolute").css("left","10px").css("top",($(window).height()-img_h)/2);
+		//$(".next").css("position","absolute").css("right","10px").css("top",($(window).height()-img_h)/2);
+		//链接在新窗口打开
+		$(".a_link dd a").attr("target","_blank");
+		$(".a_link ul li>a").hover(function(){
+			var a_href=$(this).attr("href");			
+			$(this).siblings().find("a").attr("href",a_href);
+		});
+		
+		//切屏-----------------------------------------------------------------
+		$("#top dl dd a").click(function(){
+			var now_class=$(this).attr("class");	
+			$("#top dl dd a.a_index").attr("class","a_index");
+			$("#top dl dd a.a_mzdw").attr("class","a_mzdw");
+			$("#top dl dd a.a_spyy").attr("class","a_spyy");
+			$("#top dl dd a.a_xwzx").attr("class","a_xwzx");
+			$("#top dl dd a.a_gwtb").attr("class","a_gwtb");
+			$("#top dl dd a.a_yxyl").attr("class","a_yxyl");
+			$("#top dl dd a.a_sygj").attr("class","a_sygj");
+			$("#top dl dd a.a_yszy").attr("class","a_yszy");
+			$(this).attr("class",now_class).addClass(now_class+"_h");			
+			var index=$(this).index();
+			$("#metro_box dd").hide();
+			$("#metro_box dd").eq(index).toggle(100);
+			if(index==1){
+				$("body").attr("class","bg0");	
+			}
+			switch (index){
+				case 0:
+					$("body").attr("class","");						
+					break;
+				case 1:
+					$("body").attr("class","bg0");					
+					break;
+				case 2:
+					$("body").attr("class","bg1");						
+					break;
+				case 3:
+					$("body").attr("class","bg2");					
+					break;
+				case 4:
+					$("body").attr("class","bg3");					
+					break;
+				case 5:
+					$("body").attr("class","bg4");						
+					break;	
+				case 6:
+					$("body").attr("class","bg5");						
+					break;	
+				default :
+					$("body").attr("class","bg6");						
+			}
+			
+			<!--[if IE 6]>$("#metro_box dd").eq(index).show(300);<![endif]-->			
+		});
+	});
+</script>
+</head>
+<body>
+<!--导航开始-->
+<div id="top">
+  <dl>
+    <dt><a href="https://space.bilibili.com/294253673" target="_blank">AI8120的主页</a></dt>
+    <dd>
+      <a class="a_index"href="yybfq.html" target="_blank">AI8120的播放器页面</a>
+      <a class="a_mzdw a_mzdw_h">推荐首页</a>
+      <a class="a_spyy">电影</a>
+      <a class="a_xwzx">字幕</a>
+      <a class="a_gwtb">工具</a>
+      <a class="a_yxyl">游戏</a>
+      <a class="a_sygj">二次元</a>
+      <a class="a_yszy">友情链接</a>
+      <a class="a_more" href="err404.html" target="_blank">AI8120的404页面</a></dd>
+  </dl>
+</div>
+<!--导航结束--> 
+<!--选择区开始-->
+<div id="metro_box" class="a_link">
+
+  <dl>
+    <dd style="display:none;"></dd>
+    <dd style="display:bolck;">
+    <!--推荐首页-->
+      	<ul>
+          <a href="AI8120.html" target="_blank">版权说明</a>
+		  <a href="pman.html" target="_blank">派蒙按钮</a>
+        <style>
+				#so360{width:450px;white-space:nowrap}
+				#so360 form{margin:0;padding:0}
+				#so360_keyword{width:600px;height:30px;line-height:18px;font:13px arial;padding:2px;margin-right:5px;border:2px solid #66CCFF;outline:none;vertical-align:middle}
+				#so360_submit{width:100px;height:30px;line-height:26px;border:0;color:#FFFFFF;background:#66CCFF;font-weight:bold;font:bold 13px arial;padding:0 0 1px;padding:3px 0 0\9;cursor:pointer;vertical-align:middle}
+			</style>
+				<div id="so360">
+					<form action="http://www.so.com/s" target="_blank">
+					<input type="text" x-webkit-speech="" autocomplete="off" name="q" id="so360_keyword"><input type="submit" id="so360_submit" value="搜 索">
+					<input type="hidden" name="ie" value="utf-8">
+					<input type="hidden" name="src" value="zz">
+					<input type="hidden" name="site" value="AI-8120.github.io"> 
+					<input type="hidden" name="rg" value="1">
+					</form>
+				</div>
+			<li id="logo_002"><a href="https://jq.qq.com/?_wv=1027&k=zYJ17yom"><img src="img/7Day.png" width="240" height="120" alt=""></a><span><a href="#">七日杀正版联机群:798140776</a></span></li>
+        <li id="logo_003"><a href="https://www.bilibili.com/"><img src="img/logo-bilibili.png" width="240" height="120" alt=""></a><span><a href="#">哔哩哔哩</a></span></li>
+        <li id="logo_003"><a href="https://www.natfrp.com/"><img src="img/favicon.ico" width="240" height="120" alt=""></a><span><a href="#">SakuraFrp</a></span></li>
+        <li id="logo_003"><a href=""><img src="img/logo-off.png" width="240" height="120" alt=""></a><span><a href="#">待收入</a></span></li>
+        <li id="logo_003"><a href=""><img src="img/logo-off.png" width="240" height="120" alt=""></a><span><a href="#">待收入</a></span></li>
+        <li id="logo_003"><a href=""><img src="img/logo-off.png" width="240" height="120" alt=""></a><span><a href="#">待收入</a></span></li>
+        <li id="logo_003"><a href=""><img src="img/logo-off.png" width="240" height="120" alt=""></a><span><a href="#">待收入</a></span></li>
+        <li id="logo_003"><a href=""><img src="img/logo-off.png" width="240" height="120" alt=""></a><span><a href="#">待收入</a></span></li>
+        <li id="logo_003"><a href=""><img src="img/logo-off.png" width="240" height="120" alt=""></a><span><a href="#">待收入</a></span></li>
+      </ul>
+    </dd>
+  
+   <dd style="display:none;">
+   <!--电影-->
+      <ul>
+        <style>
+				#so360{width:450px;white-space:nowrap}
+				#so360 form{margin:0;padding:0}
+				#so360_keyword{width:600px;height:30px;line-height:18px;font:13px arial;padding:2px;margin-right:5px;border:2px solid #66CCFF;outline:none;vertical-align:middle}
+				#so360_submit{width:100px;height:30px;line-height:26px;border:0;color:#FFFFFF;background:#66CCFF;font-weight:bold;font:bold 13px arial;padding:0 0 1px;padding:3px 0 0\9;cursor:pointer;vertical-align:middle}
+			</style>
+				<div id="so360">
+					<form action="http://www.so.com/s" target="_blank">
+					<input type="text" x-webkit-speech="" autocomplete="off" name="q" id="so360_keyword"><input type="submit" id="so360_submit" value="搜 索">
+					<input type="hidden" name="ie" value="utf-8">
+					<input type="hidden" name="src" value="zz">
+					<input type="hidden" name="site" value="AI-8120.github.io"> 
+					<input type="hidden" name="rg" value="1">
+					</form>
+				</div>
+	  		<li id="logo_003"><a href="https://www.bilibili.com/movie/"><img src="img/logo-bilibili.png" width="240" height="120" alt=""></a><span><a href="#">哔哩哔哩电影</a></span></li>
+        <li id="logo_003"><a href=""><img src="img/logo-off.png" width="240" height="120" alt=""></a><span><a href="#">待收入</a></span></li>
+        <li id="logo_003"><a href=""><img src="img/logo-off.png" width="240" height="120" alt=""></a><span><a href="#">待收入</a></span></li>
+        <li id="logo_003"><a href=""><img src="img/logo-off.png" width="240" height="120" alt=""></a><span><a href="#">待收入</a></span></li>
+        <li id="logo_003"><a href=""><img src="img/logo-off.png" width="240" height="120" alt=""></a><span><a href="#">待收入</a></span></li>
+        <li id="logo_003"><a href=""><img src="img/logo-off.png" width="240" height="120" alt=""></a><span><a href="#">待收入</a></span></li>
+        <li id="logo_003"><a href=""><img src="img/logo-off.png" width="240" height="120" alt=""></a><span><a href="#">待收入</a></span></li>
+        <li id="logo_003"><a href=""><img src="img/logo-off.png" width="240" height="120" alt=""></a><span><a href="#">待收入</a></span></li>
+        <li id="logo_003"><a href=""><img src="img/logo-off.png" width="240" height="120" alt=""></a><span><a href="#">待收入</a></span></li>
+      </ul>
+    </dd>
+    <dd style="display:none;">
+    <!--字幕-->
+      <ul>
+        <style>
+				#so360{width:450px;white-space:nowrap}
+				#so360 form{margin:0;padding:0}
+				#so360_keyword{width:600px;height:30px;line-height:18px;font:13px arial;padding:2px;margin-right:5px;border:2px solid #66CCFF;outline:none;vertical-align:middle}
+				#so360_submit{width:100px;height:30px;line-height:26px;border:0;color:#FFFFFF;background:#66CCFF;font-weight:bold;font:bold 13px arial;padding:0 0 1px;padding:3px 0 0\9;cursor:pointer;vertical-align:middle}
+			</style>
+				<div id="so360">
+					<form action="http://www.so.com/s" target="_blank">
+					<input type="text" x-webkit-speech="" autocomplete="off" name="q" id="so360_keyword"><input type="submit" id="so360_submit" value="搜 索">
+					<input type="hidden" name="ie" value="utf-8">
+					<input type="hidden" name="src" value="zz">
+					<input type="hidden" name="site" value="AI-8120.github.io"> 
+					<input type="hidden" name="rg" value="1">
+					</form>
+				</div>
+	  		<li id="logo_002"><a href="https://bbs.vcb-s.com/"><img src="img/logo-vcb-s.png" width="240" height="120" alt=""></a><span><a href="#">VCB-S分享论坛</a></span></li>
+			<li id="logo_002"><a href="https://secure.assrt.net/"><img src="img/shooter_logo.png" width="240" height="120" alt=""></a><span><a href="#">射手座(伪)</a></span></li>
+        <li id="logo_003"><a href=""><img src="img/logo-off.png" width="240" height="120" alt=""></a><span><a href="#">待收入</a></span></li>
+        <li id="logo_003"><a href=""><img src="img/logo-off.png" width="240" height="120" alt=""></a><span><a href="#">待收入</a></span></li>
+        <li id="logo_003"><a href=""><img src="img/logo-off.png" width="240" height="120" alt=""></a><span><a href="#">待收入</a></span></li>
+        <li id="logo_003"><a href=""><img src="img/logo-off.png" width="240" height="120" alt=""></a><span><a href="#">待收入</a></span></li>
+        <li id="logo_003"><a href=""><img src="img/logo-off.png" width="240" height="120" alt=""></a><span><a href="#">待收入</a></span></li>
+        <li id="logo_003"><a href=""><img src="img/logo-off.png" width="240" height="120" alt=""></a><span><a href="#">待收入</a></span></li>
+        <li id="logo_003"><a href=""><img src="img/logo-off.png" width="240" height="120" alt=""></a><span><a href="#">待收入</a></span></li>
+      </ul>
+    </dd>
+    <dd style="display:none;">
+    <!--工具-->
+      <ul>
+        <style>
+				#so360{width:450px;white-space:nowrap}
+				#so360 form{margin:0;padding:0}
+				#so360_keyword{width:600px;height:30px;line-height:18px;font:13px arial;padding:2px;margin-right:5px;border:2px solid #66CCFF;outline:none;vertical-align:middle}
+				#so360_submit{width:100px;height:30px;line-height:26px;border:0;color:#FFFFFF;background:#66CCFF;font-weight:bold;font:bold 13px arial;padding:0 0 1px;padding:3px 0 0\9;cursor:pointer;vertical-align:middle}
+			</style>
+				<div id="so360">
+					<form action="http://www.so.com/s" target="_blank">
+					<input type="text" x-webkit-speech="" autocomplete="off" name="q" id="so360_keyword"><input type="submit" id="so360_submit" value="搜 索">
+					<input type="hidden" name="ie" value="utf-8">
+					<input type="hidden" name="src" value="zz">
+					<input type="hidden" name="site" value="AI-8120.github.io"> 
+					<input type="hidden" name="rg" value="1">
+					</form>
+				</div>
+	  		<li id="logo_003"><a href="https://www.natfrp.com/"><img src="img/favicon.ico" width="240" height="120" alt=""></a><span><a href="#">SakuraFrp</a></span></li>
+			<li id="logo_003"><a href=""><img src="img/logo-off.png" width="240" height="120" alt=""></a><span><a href="#">待收入</a></span></li>
+			<li id="logo_003"><a href=""><img src="img/logo-off.png" width="240" height="120" alt=""></a><span><a href="#">待收入</a></span></li>
+ 			<li id="logo_003"><a href=""><img src="img/logo-off.png" width="240" height="120" alt=""></a><span><a href="#">待收入</a></span></li>
+ 			<li id="logo_003"><a href=""><img src="img/logo-off.png" width="240" height="120" alt=""></a><span><a href="#">待收入</a></span></li>
+  			<li id="logo_003"><a href=""><img src="img/logo-off.png" width="240" height="120" alt=""></a><span><a href="#">待收入</a></span></li>
+  			<li id="logo_003"><a href=""><img src="img/logo-off.png" width="240" height="120" alt=""></a><span><a href="#">待收入</a></span></li>
+  			<li id="logo_003"><a href=""><img src="img/logo-off.png" width="240" height="120" alt=""></a><span><a href="#">待收入</a></span></li>
+  			<li id="logo_003"><a href=""><img src="img/logo-off.png" width="240" height="120" alt=""></a><span><a href="#">待收入</a></span></li>
+    </dd>
+    <dd style="display:none;">
+    <!--游戏-->
+      <ul>
+        <style>
+				#so360{width:450px;white-space:nowrap}
+				#so360 form{margin:0;padding:0}
+				#so360_keyword{width:600px;height:30px;line-height:18px;font:13px arial;padding:2px;margin-right:5px;border:2px solid #66CCFF;outline:none;vertical-align:middle}
+				#so360_submit{width:100px;height:30px;line-height:26px;border:0;color:#FFFFFF;background:#66CCFF;font-weight:bold;font:bold 13px arial;padding:0 0 1px;padding:3px 0 0\9;cursor:pointer;vertical-align:middle}
+			</style>
+				<div id="so360">
+					<form action="http://www.so.com/s" target="_blank">
+					<input type="text" x-webkit-speech="" autocomplete="off" name="q" id="so360_keyword"><input type="submit" id="so360_submit" value="搜 索">
+					<input type="hidden" name="ie" value="utf-8">
+					<input type="hidden" name="src" value="zz">
+					<input type="hidden" name="site" value="AI-8120.github.io"> 
+					<input type="hidden" name="rg" value="1">
+					</form>
+				</div>
+        <li id="logo_003"><a href=""><img src="img/logo-off.png" width="240" height="120" alt=""></a><span><a href="#">待收入</a></span></li>
+        <li id="logo_003"><a href=""><img src="img/logo-off.png" width="240" height="120" alt=""></a><span><a href="#">待收入</a></span></li>
+        <li id="logo_003"><a href=""><img src="img/logo-off.png" width="240" height="120" alt=""></a><span><a href="#">待收入</a></span></li>
+        <li id="logo_003"><a href=""><img src="img/logo-off.png" width="240" height="120" alt=""></a><span><a href="#">待收入</a></span></li>
+        <li id="logo_003"><a href=""><img src="img/logo-off.png" width="240" height="120" alt=""></a><span><a href="#">待收入</a></span></li>
+        <li id="logo_003"><a href=""><img src="img/logo-off.png" width="240" height="120" alt=""></a><span><a href="#">待收入</a></span></li>
+        <li id="logo_003"><a href=""><img src="img/logo-off.png" width="240" height="120" alt=""></a><span><a href="#">待收入</a></span></li>
+        <li id="logo_003"><a href=""><img src="img/logo-off.png" width="240" height="120" alt=""></a><span><a href="#">待收入</a></span></li>
+        <li id="logo_003"><a href=""><img src="img/logo-off.png" width="240" height="120" alt=""></a><span><a href="#">待收入</a></span></li>
+      </ul>
+    </dd>
+    <dd style="display:none;">
+    <!--二次元-->
+      <ul>
+        <style>
+				#so360{width:450px;white-space:nowrap}
+				#so360 form{margin:0;padding:0}
+				#so360_keyword{width:600px;height:30px;line-height:18px;font:13px arial;padding:2px;margin-right:5px;border:2px solid #66CCFF;outline:none;vertical-align:middle}
+				#so360_submit{width:100px;height:30px;line-height:26px;border:0;color:#FFFFFF;background:#66CCFF;font-weight:bold;font:bold 13px arial;padding:0 0 1px;padding:3px 0 0\9;cursor:pointer;vertical-align:middle}
+			</style>
+				<div id="so360">
+					<form action="http://www.so.com/s" target="_blank">
+					<input type="text" x-webkit-speech="" autocomplete="off" name="q" id="so360_keyword"><input type="submit" id="so360_submit" value="搜 索">
+					<input type="hidden" name="ie" value="utf-8">
+					<input type="hidden" name="src" value="zz">
+					<input type="hidden" name="site" value="AI-8120.github.io"> 
+					<input type="hidden" name="rg" value="1">
+					</form>
+				</div>
+	  		<li id="logo_003"><a href="https://www.bilibili.com/anime/"><img src="img/logo-bilibili.png" width="240" height="120" alt=""></a><span><a href="#">哔哩哔哩番剧</a></span></li>
+			<li id="logo_007"><a href="https://otakusns.com/"><img src="img/YZC.png" width="240" height="120" alt=""></a><span><a href="#">御宅社</a></span></li>
+			<li id="logo_007"><a href="https://bbs.kdays.net/"><img src="img/log_KDays.png" width="240" height="120" alt=""></a><span><a href="#">KDays</a></span></li>
+        <li id="logo_003"><a href=""><img src="img/logo-off.png" width="240" height="120" alt=""></a><span><a href="#">待收入</a></span></li>
+        <li id="logo_003"><a href=""><img src="img/logo-off.png" width="240" height="120" alt=""></a><span><a href="#">待收入</a></span></li>
+        <li id="logo_003"><a href=""><img src="img/logo-off.png" width="240" height="120" alt=""></a><span><a href="#">待收入</a></span></li>
+        <li id="logo_003"><a href=""><img src="img/logo-off.png" width="240" height="120" alt=""></a><span><a href="#">待收入</a></span></li>
+        <li id="logo_003"><a href=""><img src="img/logo-off.png" width="240" height="120" alt=""></a><span><a href="#">待收入</a></span></li>
+        <li id="logo_003"><a href=""><img src="img/logo-off.png" width="240" height="120" alt=""></a><span><a href="#">待收入</a></span></li>
+      </ul>
+    </dd>
+     <dd style="display:none;">
+     <!--友情链接-->
+      <ul>
+        <style>
+				#so360{width:450px;white-space:nowrap}
+				#so360 form{margin:0;padding:0}
+				#so360_keyword{width:600px;height:30px;line-height:18px;font:13px arial;padding:2px;margin-right:5px;border:2px solid #66CCFF;outline:none;vertical-align:middle}
+				#so360_submit{width:100px;height:30px;line-height:26px;border:0;color:#FFFFFF;background:#66CCFF;font-weight:bold;font:bold 13px arial;padding:0 0 1px;padding:3px 0 0\9;cursor:pointer;vertical-align:middle}
+			</style>
+				<div id="so360">
+					<form action="http://www.so.com/s" target="_blank">
+					<input type="text" x-webkit-speech="" autocomplete="off" name="q" id="so360_keyword"><input type="submit" id="so360_submit" value="搜 索">
+					<input type="hidden" name="ie" value="utf-8">
+					<input type="hidden" name="src" value="zz">
+					<input type="hidden" name="site" value="AI-8120.github.io"> 
+					<input type="hidden" name="rg" value="1">
+					</form>
+				</div>
+	  		<li id="logo_007"><a href="https://otakusns.com/"><img src="img/YZC.png" width="240" height="120" alt=""></a><span><a href="#">御宅社</a></span></li>
+			<li id="logo_007"><a href="http://bbs.kdays.net/"><img src="img/log_KDays.png" width="240" height="120" alt=""></a><span><a href="#">KDays</a></span></li>
+        <li id="logo_003"><a href=""><img src="img/logo-off.png" width="240" height="120" alt=""></a><span><a href="#">待收入</a></span></li>
+			<li id="logo_003"><a href=""><img src="img/logo-off.png" width="240" height="120" alt=""></a><span><a href="#">待收入</a></span></li>
+        <li id="logo_003"><a href=""><img src="img/logo-off.png" width="240" height="120" alt=""></a><span><a href="#">待收入</a></span></li>
+        <li id="logo_003"><a href=""><img src="img/logo-off.png" width="240" height="120" alt=""></a><span><a href="#">待收入</a></span></li>
+        <li id="logo_003"><a href=""><img src="img/logo-off.png" width="240" height="120" alt=""></a><span><a href="#">待收入</a></span></li>
+        <li id="logo_003"><a href=""><img src="img/logo-off.png" width="240" height="120" alt=""></a><span><a href="#">待收入</a></span></li>
+        <li id="logo_003"><a href=""><img src="img/logo-off.png" width="240" height="120" alt=""></a><span><a href="#">待收入</a></span></li>
+      </ul>
+    </dd>
+  </dl>
+</div>
+<!--选择区结束--> 
+<!--站娘-->
+<div id="landlord">
+    <div class="message" style="opacity:0"></div>
+    <canvas id="live2d" width="280" height="250" class="live2d"></canvas>
+    <div class="hide-button">隐藏</div>
+</div>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+    var message_Path = 'https://ai8120.github.io/live2d/'
+    var home_Path = 'https://ai8120.github.io/'
+</script>
+<script type="text/javascript" src="js/live2d.js"></script>
+<script type="text/javascript" src="js/message.js"></script>
+<script type="text/javascript">
+    loadlive2d("live2d", "https://ai8120.github.io/live2d/Pio/model.json");
+</script>
+<!--站娘-->
+</body>
+</html>

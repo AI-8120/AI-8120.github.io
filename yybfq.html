@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>AI8120的播放器主页</title>
+<video
+	muted
+	autoplay="autoplay"
+	loop="loop"
+	x5-playsinline="true"
+	playsinline="true"
+	webkit-playsinline="true"
+	x-webkit-airplay="allow"
+	preload="auto"
+	x5-video-player-type="h5"
+	x5-video-player-fullscreen="true"
+   >
+<source src="video/ATRI.mp4" type="video/mp4">
+</video>
+<meta name="keywords" content="AI8120的播放器主页" />
+<meta name="description" content="AI8120的播放器主页" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<link rel="stylesheet" href="css/smusic.css"/>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="grid-music-container f-usn">
+    <div class="m-music-play-wrap">
+        <div class="u-cover"></div>
+        <div class="m-now-info">
+            <h1 class="u-music-title"><strong>标题</strong><small>歌手</small></h1>
+            <div class="m-now-controls">
+                <div class="u-control u-process">
+                    <span class="buffer-process"></span>
+                    <span class="current-process"></span>
+                </div>
+                <div class="u-control u-time">00:00/00:00</div>
+                <div class="u-control u-volume">
+                    <div class="volume-process" data-volume="0.50">
+                        <span class="volume-current"></span>
+                        <span class="volume-bar"></span>
+                        <span class="volume-event"></span>
+                    </div>
+                    <a class="volume-control"></a>
+                </div>
+            </div>
+            <div class="m-play-controls">
+                <a class="u-play-btn prev" title="上一曲"></a>
+                <a class="u-play-btn ctrl-play play" title="暂停"></a>
+                <a class="u-play-btn next" title="下一曲"></a>
+                <a class="u-play-btn mode mode-list current" title="列表循环"></a>
+                <a class="u-play-btn mode mode-random" title="随机播放"></a>
+                <a class="u-play-btn mode mode-single" title="单曲循环"></a>
+            </div>
+        </div>
+    </div>
+    <div class="f-cb"> </div>
+    <div class="m-music-list-wrap"></div>
+</div>
+<div class="box">
+  <div class="line-1"></div>
+  <div class="line-2"></div>
+  <div class="line-3"></div>
+  <div class="line-4"></div>
+  <div class="line-5"></div>
+  <div class="line-6"></div>
+  <div class="line-7"></div>
+  <div class="line-8"></div>
+  <div class="line-9"></div>
+  <div class="line-10"></div>
+  <div class="line-11"></div>
+  <div class="line-12"></div>
+  <div class="line-13"></div>
+  <div class="line-14"></div>
+  <div class="line-15"></div>
+  <div class="line-16"></div>
+  <div class="line-17"></div>
+  <div class="line-18"></div>
+  <div class="line-19"></div>
+  <div class="line-20"></div>
+  <div class="line-21"></div>
+  <div class="line-22"></div>
+  <div class="line-23"></div>
+  <div class="line-24"></div>
+  <div class="line-25"></div>
+  <div class="line-26"></div>
+  <div class="line-27"></div>
+  <div class="line-28"></div>
+  <div class="line-29"></div>
+  <div class="line-30"></div>
+  <div class="line-31"></div>
+  <div class="line-32"></div>
+  <div class="line-33"></div>
+  <div class="line-34"></div>
+  <div class="line-35"></div>
+  <div class="line-36"></div>
+  <div class="line-37"></div>
+  <div class="line-38"></div>
+  <div class="line-39"></div>
+  <div class="line-40"></div>
+  <div class="line-41"></div>
+  <div class="line-42"></div>
+  <div class="line-43"></div>
+  <div class="line-44"></div>
+  <div class="line-45"></div>
+  <div class="line-46"></div>
+  <div class="line-47"></div>
+  <div class="line-48"></div>
+  <div class="line-49"></div>
+  <div class="line-50"></div>
+  <div class="line-51"></div>
+  <div class="line-52"></div>
+  <div class="line-53"></div>
+  <div class="line-54"></div>
+  <div class="line-55"></div>
+  <div class="line-56"></div>
+  <div class="line-57"></div>
+  <div class="line-58"></div>
+</div>
+<script src="js/smusic.min.js"></script>
+<script>
+var musicList = [
+  	{
+		title : 'ATRI',
+		singer : '',
+		cover  : 'http://p2.music.126.net/NZiP96ACOwRYdbaDyq2t1Q==/109951165093494270.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=1458490730.mp3'
+	},
+	{
+		title : 'The answer sleeps within me',
+		singer : 'ALVINE',
+		cover  : 'http://p2.music.126.net/ud4wj220SZq0AQkOv1_BaA==/109951163110732394.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=530801886.mp3'
+	},
+  	{
+		title : '刀争-CLIMAX-',
+		singer : 'ALVINE',
+		cover  : 'http://p2.music.126.net/ud4wj220SZq0AQkOv1_BaA==/109951163110732394.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=530801888.mp3'
+	},
+  	{
+		title : '雅牙-MIYABI-',
+		singer : 'ALVINE',
+		cover  : 'http://p1.music.126.net/ud4wj220SZq0AQkOv1_BaA==/109951163110732394.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=530801887.mp3'
+	},
+  	{
+		title : '天叢-KATANA-',
+		singer : 'ALVINE',
+		cover  : 'http://p1.music.126.net/ud4wj220SZq0AQkOv1_BaA==/109951163110732394.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=530801878.mp3'
+	},
+   {
+		title : 'DiVE LINKAGE',
+		singer : 'ALVINE',
+		cover  : 'http://p1.music.126.net/ud4wj220SZq0AQkOv1_BaA==/109951163110732394.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=530801884.mp3'
+	},
+  	{
+		title : 'Thinking bursT',
+		singer : 'ALVINE',
+		cover  : 'http://p1.music.126.net/ud4wj220SZq0AQkOv1_BaA==/109951163110732394.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=530801880.mp3'
+	},
+  	{
+		title : 'Battle of Eyelis',
+		singer : 'ALVINE',
+		cover  : 'http://p1.music.126.net/ud4wj220SZq0AQkOv1_BaA==/109951163110732394.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=530801885.mp3'
+	},
+  	{
+		title : '一騎当千、修羅の道',
+		singer : 'ALVINE',
+		cover  : 'http://p1.music.126.net/ud4wj220SZq0AQkOv1_BaA==/109951163110732394.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=530801879.mp3'
+	},
+  	{
+		title : '百折不撓-FORCE-',
+		singer : 'ALVINE',
+		cover  : 'http://p1.music.126.net/ud4wj220SZq0AQkOv1_BaA==/109951163110732394.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=530801882.mp3'
+	},
+  	{
+		title : '彫心鏤骨-DEVISING-',
+		singer : 'ALVINE',
+		cover  : 'http://p1.music.126.net/ud4wj220SZq0AQkOv1_BaA==/109951163110732394.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=530801881.mp3'
+	},
+  	{
+		title : '鏡花水月-PRECIOUS-',
+		singer : 'ALVINE',
+		cover  : 'http://p1.music.126.net/ud4wj220SZq0AQkOv1_BaA==/109951163110732394.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=530801889.mp3'
+	},
+  	{
+		title : 'TSUBAKi IRO KOiUTA',
+		singer : '冬乃桜',
+		cover  : 'http://p1.music.126.net/NnH7XOLSm-lRM7aRN4Y1jA==/109951164422696246.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=1396497627.mp3'
+	},
+  	{
+		title : '可憐雪月花',
+		singer : 'KEiNA',
+		cover  : 'http://p2.music.126.net/Sum0Ui3QtRiOTzhK5OA-4w==/109951163934673832.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=1352576655.mp3'
+	},
+  	{
+		title : 'EVERLasT/nG StreNGTH',
+		singer : '冬乃桜',
+		cover  : 'http://p2.music.126.net/Sum0Ui3QtRiOTzhK5OA-4w==/109951163934673832.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=1352576653.mp3'
+	},
+  	{
+		title : '双繊月~歩きたりこう共に~',
+		singer : 'Miu',
+		cover  : 'http://p2.music.126.net/Sum0Ui3QtRiOTzhK5OA-4w==/109951163934673832.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=1352576651.mp3'
+	},
+  	{
+		title : 'EXPERIENCE SENTIENCE',
+		singer : '智斗紅',
+		cover  : 'http://p2.music.126.net/Sum0Ui3QtRiOTzhK5OA-4w==/109951163934673832.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=1352576010.mp3'
+	},
+  	{
+		title : '月華美刃-SUBJECT VI-',
+		singer : '琉姫アルナ',
+		cover  : 'http://p2.music.126.net/NnH7XOLSm-lRM7aRN4Y1jA==/109951164422696246.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=1396497624.mp3'
+	},
+  	{
+		title : '鏡花水月-PRECIOUS-',
+		singer : '智斗紅',
+		cover  : 'http://p2.music.126.net/Sum0Ui3QtRiOTzhK5OA-4w==/109951163934673832.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=1352576650.mp3'
+	},
+  	{
+		title : '天叢-KATANA-',
+		singer : '智斗紅',
+		cover  : 'http://p2.music.126.net/Sum0Ui3QtRiOTzhK5OA-4w==/109951163934673832.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=1352576014.mp3'
+	},
+  	{
+		title : '百花繚乱-凛-',
+		singer : '智斗紅',
+		cover  : 'http://p2.music.126.net/Sum0Ui3QtRiOTzhK5OA-4w==/109951163934673832.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=1352576533.mp3'
+	},
+  	{
+		title : '天衣無縫-翔-',
+		singer : '智斗紅',
+		cover  : 'http://p2.music.126.net/Sum0Ui3QtRiOTzhK5OA-4w==/109951163934673832.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=1352576006.mp3'
+	},
+  	{
+		title : '天真爛漫-華-',
+		singer : '智斗紅',
+		cover  : 'http://p2.music.126.net/Sum0Ui3QtRiOTzhK5OA-4w==/109951163934673832.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=1352576011.mp3'
+	},
+  	{
+		title : '禍罪〈MAGATSUMI〉',
+		singer : '智斗紅',
+		cover  : 'http://p2.music.126.net/Sum0Ui3QtRiOTzhK5OA-4w==/109951163934673832.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=1352576013.mp3'
+	},
+  	{
+		title : '住吉〈SUMIYOSHI〉',
+		singer : '智斗紅',
+		cover  : 'http://p2.music.126.net/Sum0Ui3QtRiOTzhK5OA-4w==/109951163934673832.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=1352576531.mp3'
+	},
+  	{
+		title : '叢雲〈MURAKUMO〉',
+		singer : '智斗紅',
+		cover  : 'http://p2.music.126.net/Sum0Ui3QtRiOTzhK5OA-4w==/109951163934673832.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=1352576535.mp3'
+	},
+  	{
+		title : 'ANSWERS／EEPs',
+		singer : '琉姫アルナ',
+		cover  : 'http://p1.music.126.net/NnH7XOLSm-lRM7aRN4Y1jA==/109951164422696246.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=1396497631.mp3'
+	},
+  	{
+		title : 'AMATSUMARA-NO-MIKOTO',
+		singer : '琉姫アルナ',
+		cover  : 'http://p1.music.126.net/NnH7XOLSm-lRM7aRN4Y1jA==/109951164422696246.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=1396497630.mp3'
+	},
+  	{
+		title : 'BurninGCL／MAX',
+		singer : '琉姫アルナ',
+		cover  : 'http://p1.music.126.net/NnH7XOLSm-lRM7aRN4Y1jA==/109951164422696246.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=1396497626.mp3'
+	},
+  	{
+		title : 'L：IVKAGE',
+		singer : '琉姫アルナ',
+		cover  : 'http://p1.music.126.net/NnH7XOLSm-lRM7aRN4Y1jA==/109951164422696246.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=1396498435.mp3'
+	},
+  	{
+		title : 'EYEL：iS',
+		singer : '琉姫アルナ',
+		cover  : 'http://p1.music.126.net/NnH7XOLSm-lRM7aRN4Y1jA==/109951164422696246.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=1396498434.mp3'
+	},
+  	{
+		title : 'TrueFORCE',
+		singer : '琉姫アルナ',
+		cover  : 'http://p1.music.126.net/NnH7XOLSm-lRM7aRN4Y1jA==/109951164422696246.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=1396497625.mp3'
+	},
+  	{
+		title : '紫電清霜-祈-',
+		singer : '琉姫アルナ',
+		cover  : 'http://p1.music.126.net/NnH7XOLSm-lRM7aRN4Y1jA==/109951164422696246.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=1396498431.mp3'
+	},
+  	{
+		title : 'FUTURE TALK',
+		singer : '智斗紅',
+		cover  : 'http://p2.music.126.net/Sum0Ui3QtRiOTzhK5OA-4w==/109951163934673832.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=1352576008.mp3'
+	},
+  	{
+		title : 'とらぶるっ！',
+		singer : '智斗紅',
+		cover  : 'http://p2.music.126.net/Sum0Ui3QtRiOTzhK5OA-4w==/109951163934673832.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=1352576552.mp3'
+	},
+  	{
+		title : 'Impatient impulses',
+		singer : '智斗紅',
+		cover  : 'http://p2.music.126.net/Sum0Ui3QtRiOTzhK5OA-4w==/109951163934673832.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=1352576562.mp3'
+	},
+  	{
+		title : 'Slashing gusT',
+		singer : '智斗紅',
+		cover  : 'http://p2.music.126.net/Sum0Ui3QtRiOTzhK5OA-4w==/109951163934673832.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=1352576557.mp3'
+	},
+  	{
+		title : 'CompetitioN',
+		singer : '智斗紅',
+		cover  : 'http://p2.music.126.net/Sum0Ui3QtRiOTzhK5OA-4w==/109951163934673832.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=1352580067.mp3'
+	},
+  	{
+		title : 'SpectatoR',
+		singer : '智斗紅',
+		cover  : 'http://p2.music.126.net/Sum0Ui3QtRiOTzhK5OA-4w==/109951163934673832.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=1352576553.mp3'
+	},
+  	{
+		title : 'Thinking bursT',
+		singer : '智斗紅',
+		cover  : 'http://p2.music.126.net/Sum0Ui3QtRiOTzhK5OA-4w==/109951163934673832.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=1352576559.mp3'
+	},
+  	{
+		title : '彫心鏤骨-DEVISING-',
+		singer : '智斗紅',
+		cover  : 'http://p2.music.126.net/Sum0Ui3QtRiOTzhK5OA-4w==/109951163934673832.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=1352580086.mp3'
+	},
+  	{
+		title : '拮抗三頭-CONQUER-',
+		singer : '智斗紅',
+		cover  : 'http://p2.music.126.net/Sum0Ui3QtRiOTzhK5OA-4w==/109951163934673832.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=1352576573.mp3'
+	},
+  	{
+		title : 'Suffering Exorcism',
+		singer : '智斗紅',
+		cover  : 'http://p2.music.126.net/Sum0Ui3QtRiOTzhK5OA-4w==/109951163934673832.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=1352580083.mp3'
+	},
+  	{
+		title : 'KAMI-Signs of arousaL-',
+		singer : '智斗紅',
+		cover  : 'http://p2.music.126.net/Sum0Ui3QtRiOTzhK5OA-4w==/109951163934673832.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=1352576656.mp3'
+	},
+  	{
+		title : 'TSUBAKi IRO KOiUTA～弐式～',
+		singer : '冬乃桜',
+		cover  : 'http://p1.music.126.net/NnH7XOLSm-lRM7aRN4Y1jA==/109951164422696246.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=1396498432.mp3'
+	},
+  	{
+		title : 'キミのオト (ショート ver.)',
+		singer : 'Duca',
+		cover  : 'http://p1.music.126.net/ZEOJgHqaabrRii3_SCCCpw==/109951163020617434.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=504425342.mp3'
+	},
+  	{
+		title : 'Fate Line',
+		singer : 'Duca',
+		cover  : 'http://p1.music.126.net/ZEOJgHqaabrRii3_SCCCpw==/109951163020617434.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=504425313.mp3'
+	},
+  	{
+		title : '館廻り',
+		singer : '電気式華憐音楽集団',
+		cover  : 'http://p1.music.126.net/ULAuItWBBJc1_r8qYQoP5A==/109951163861577712.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=1345936297.mp3'
+	},
+  	{
+		title : '流転',
+		singer : 'Noras',
+		cover  : 'http://p1.music.126.net/ULAuItWBBJc1_r8qYQoP5A==/109951163861577712.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=1345938268.mp3'
+	},
+  	{
+		title : '追憶',
+		singer : 'Noras',
+		cover  : 'http://p1.music.126.net/ULAuItWBBJc1_r8qYQoP5A==/109951163861577712.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=1345938263.mp3'
+	},
+  	{
+		title : '果て',
+		singer : 'Noras',
+		cover  : 'http://p1.music.126.net/ULAuItWBBJc1_r8qYQoP5A==/109951163861577712.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=1345936295.mp3'
+	},
+  	{
+		title : '蒼い月',
+		singer : 'Daisy×Daisy',
+		cover  : 'http://p1.music.126.net/RSjt5RqHGumJ_c7o81dtFQ==/109951164444174341.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=1398671820.mp3'
+	},
+  	{
+		title : 'Buddy!!',
+		singer : 'Ceui',
+		cover  : 'http://p1.music.126.net/RSjt5RqHGumJ_c7o81dtFQ==/109951164444174341.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=1398670837.mp3'
+	},
+  	{
+		title : 'Teartale',
+		singer : '青木瑠璃子',
+		cover  : 'http://p1.music.126.net/9cYjxiCbjWW_FWGPAMBl-g==/109951164444168298.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=1398671657.mp3'
+	},
+  	{
+		title : 'Be Zero',
+		singer : 'Hilcrhyme',
+		cover  : 'http://p1.music.126.net/mmqQpfw3qwyg22F7uBPi9A==/109951164680035343.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=1421173637.mp3'
+	},
+  	{
+		title : '臆病な狼 2019',
+		singer : 'Hilcrhyme',
+		cover  : 'http://p1.music.126.net/mmqQpfw3qwyg22F7uBPi9A==/109951164680035343.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=1421174184.mp3'
+	},
+  	{
+		title : '臆病な狼 2019',
+		singer : 'Hilcrhyme',
+		cover  : 'http://p1.music.126.net/mmqQpfw3qwyg22F7uBPi9A==/109951164680035343.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=1421174184.mp3'
+	},
+  	{
+		title : '漂流 with KIVΛ -CytusⅡ.ver-',
+		singer : '菅原纱由理（THE SxPLAY） / KIVΛ',
+		cover  : 'http://p1.music.126.net/DpcMK6vdj7vD-yY3QUHwng==/109951164433935873.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=1397664735.mp3'
+	},
+  	{
+		title : 'Have a live day fullver.',
+		singer : 'Ceui',
+		cover  : 'http://p2.music.126.net/d7NYyyT29eLEZCEULEMi_g==/109951164000249408.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=1358848465.mp3'
+	},
+  	{
+		title : 'カルス fullver.',
+		singer : '相良心',
+		cover  : 'http://p1.music.126.net/d7NYyyT29eLEZCEULEMi_g==/109951164000249408.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=1358848467.mp3'
+	},
+  	{
+		title : '生きとし生けるもの',
+		singer : '天宫エリカ',
+		cover  : '',
+		src    : 'http://music.163.com/song/media/outer/url?id=29783598.mp3'
+	},
+  	{
+		title : 'astral ability',
+		singer : '橋本みゆき / 佐咲紗花',
+		cover  : 'http://p1.music.126.net/YM3igu2abTjWdIfT_Gn5Lw==/109951163479574970.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=1303019256.mp3'
+	},
+  	{
+		title : 'ゆびきり',
+		singer : '霜月はるか',
+		cover  : 'http://p1.music.126.net/YM3igu2abTjWdIfT_Gn5Lw==/109951163479574970.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=1303026232.mp3'
+	},
+  	{
+		title : 'ずっと',
+		singer : '葉月',
+		cover  : 'http://p1.music.126.net/YM3igu2abTjWdIfT_Gn5Lw==/109951163479574970.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=1303028237.mp3'
+	},
+  	{
+		title : '恋だより',
+		singer : '羽生みいな',
+		cover  : 'http://p1.music.126.net/YM3igu2abTjWdIfT_Gn5Lw==/109951163479574970.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=1303019257.mp3'
+	},
+  	{
+		title : '陽だまり笑顔で',
+		singer : '春風まゆき',
+		cover  : 'http://p1.music.126.net/YM3igu2abTjWdIfT_Gn5Lw==/109951163479574970.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=1303026234.mp3'
+	},
+  	{
+		title : '春音＊ベール OP fullver',
+		singer : 'Ceui',
+		cover  : 'http://p2.music.126.net/5S3aoMNzzm3KczCAe9Xj0Q==/109951163860833317.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=1345879247.mp3'
+	},
+  	{
+		title : 'ALICE GRADUATION ED fullver',
+		singer : 'Ronica',
+		cover  : 'http://p2.music.126.net/5S3aoMNzzm3KczCAe9Xj0Q==/109951163860833317.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=1345879267.mp3'
+	},
+  	{
+		title : 'Melt Together',
+		singer : 'AiRI',
+		cover  : 'http://p2.music.126.net/5FrBYuzf3r1jxi9eebyPIA==/109951164605892657.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=1414536325.mp3'
+	},
+  	{
+		title : 'Clover Days',
+		singer : '真理絵',
+		cover  : 'http://p1.music.126.net/K_HeM5OINPanUPJkNuQM4A==/6023124697295331.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=28481751.mp3'
+	},
+  	{
+		title : 'Clover Heart is -New days recording-',
+		singer : '真理絵',
+		cover  : 'http://p1.music.126.net/K_HeM5OINPanUPJkNuQM4A==/6023124697295331.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=28481753.mp3'
+	},
+  	{
+		title : 'LOVING TRIP',
+		singer : 'yozuca*',
+		cover  : 'http://p1.music.126.net/2JciHP89Qgvhnx-ERlNrfQ==/109951163006790071.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=448316816.mp3'
+	},
+  	{
+		title : 'ミライメロディ',
+		singer : 'yozuca*',
+		cover  : 'http://p1.music.126.net/2JciHP89Qgvhnx-ERlNrfQ==/109951163006790071.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=448316829.mp3'
+	},
+  	{
+		title : 'little explorer',
+		singer : '原田ひとみ',
+		cover  : 'http://p2.music.126.net/tSRITWmM45KmvQqLk9WOaA==/3275445140058616.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=527457.mp3'
+	},
+  	{
+		title : 'perpetual wishes～守护永恒的爱',
+		singer : 'fripSide',
+		cover  : 'http://p1.music.126.net/GqZDkiAE6McqNbWQphYBWw==/109951163238698510.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=551502895.mp3'
+	},
+  	{
+		title : 'You make my day !',
+		singer : 'YURIA',
+		cover  : 'http://p2.music.126.net/30NfxGnpbg9pPZgjJnT17w==/6035219325578268.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=28814983.mp3'
+	},
+  	{
+		title : 'いちばん星',
+		singer : '種田梨沙 / 洲崎綾 / M・A・O / 田所あずさ',
+		cover  : 'http://p1.music.126.net/HaP4YUrwRS_r6xdKPnOL5Q==/6055010534442248.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=28445564.mp3'
+	},
+  	{
+		title : 'BRYNHILDR IN THE DARKNESS -Ver. EJECTED-',
+		singer : '鴇沢直',
+		cover  : 'http://p1.music.126.net/HaP4YUrwRS_r6xdKPnOL5Q==/6055010534442248.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=28445545.mp3'
+	},
+  	{
+		title : 'Worlds Pain',
+		singer : 'Ceui',
+		cover  : 'http://p1.music.126.net/w59pFLLaCaiVUMa3I8zG4g==/1404076361928835.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=422790431.mp3'
+	},
+  	{
+		title : 'Twinkle Starlight',
+		singer : '佐咲紗花',
+		cover  : 'http://p1.music.126.net/w59pFLLaCaiVUMa3I8zG4g==/1404076361928835.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=422790430.mp3'
+	},
+  	{
+		title : 'なのです!',
+		singer : 'ななひら / 宇佐美宏 / void',
+		cover  : 'http://p2.music.126.net/h7-PA6-oNfaFFQGtCmW-qQ==/1411772941348716.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=415787008.mp3'
+	},
+  	{
+		title : 'ベースラインやってる?笑',
+		singer : 'ななひら',
+		cover  : 'http://p2.music.126.net/MtWOQCc_JLINjKgzZFoJXQ==/109951163098306222.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=526904525.mp3'
+	},
+  	{
+		title : '鳥の詩',
+		singer : 'Lia',
+		cover  : 'http://p1.music.126.net/CI_u3SfBgdTIAQtFnn_wnQ==/6040716883009850.jpg?param=130y130',
+		src    : 'http://music.163.com/song/media/outer/url?id=28151022.mp3'
+	},
+];
+new SMusic({
+	musicList:musicList
+});
+</script>
+
+<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+</div>
+</body>
+</html>
