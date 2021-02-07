@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/fontawesome.css">
     <link rel="stylesheet" href="css/templatemo-stand-blog.css">
     <link rel="stylesheet" href="css/owl.css">
+	<link rel="stylesheet" href="css/live2d.css" />
 	<link rel="stylesheet" href="css/metrope.css">
 	<script type="text/javascript" src="js/jquery-1.4.4.minpe.js"></script>
 	<script> if(navigator.platform.indexOf('Win32')!=-1){window.location.href="http://AI-8120.github.io/";} </script>
@@ -131,5 +132,22 @@
           }
       }
     </script>
+<!--站娘-->
+<div id="landlord">
+    <div class="message" style="opacity:0"></div>
+    <canvas id="live2d" width="280" height="250" class="live2d"></canvas>
+    <div class="hide-button">隐藏</div>
+</div>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+    var message_Path = 'https://AI-8120.github.io/live2d/'
+    var home_Path = 'https://AI-8120.github.io/'
+</script>
+<script type="text/javascript" src="js/live2d.js"></script>
+<script type="text/javascript" src="js/message.js"></script>
+<script type="text/javascript">
+    loadlive2d("live2d", "https://AI-8120.github.io/live2d/Pio/model.json");
+</script>
+<!--站娘-->
   </body>
 </html>
