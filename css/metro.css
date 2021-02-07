@@ -1,7 +1,7 @@
 ﻿@charset "utf-8";
 /* CSS Document */
 *{ margin:0; padding:0;}
-body{ background:#66CCFF url(../img/bg7.jpg) repeat center top; overflow:hidden;}
+body{ background:#66CCFF url(https://ai-8120.github.io/img/bg7.jpg) repeat center top; overflow:hidden;}
 
 #top{ height:39px; line-height:39px; width:100%; background:url(../img/top_bg.png) repeat-x left top; overflow:hidden; padding:15px 0;}
 #top dl{ width:990px; margin:0 auto;}
@@ -30,13 +30,13 @@ body{ background:#66CCFF url(../img/bg7.jpg) repeat center top; overflow:hidden;
 .a_more{width:33px; height:39px; background:url(../img/img_split.png) no-repeat -740px -96px;}
 
 #metro_box{ width:990px; height:565px; overflow:hidden; margin:0 auto; }
-.bg0{ background:#66CCFF url(../img/bg7.jpg) repeat center top;}
-.bg1{ background:#66CCFF url(../img/bg1.jpg) repeat-x center top;}
-.bg2{ background:#66CCFF url(../img/bg2.jpg) no-repeat center top;}
-.bg3{ background:#66CCFF url(../img/bg3.jpg) no-repeat center top;}
-.bg4{ background:#66CCFF url(../img/bg4.jpg) no-repeat center top;}
-.bg5{ background:#66CCFF url(../img/bg5.jpg) repeat center top;}
-.bg6{ background:#66CCFF url(../img/bg6.jpg) no-repeat center top;}
+.bg0{ background:#66CCFF url(https://ai-8120.github.io/img/bg7.jpg) repeat center top;}
+.bg1{ background:#66CCFF url(https://ai-8120.github.io/img/bg1.jpg) repeat-x center top;}
+.bg2{ background:#66CCFF url(https://ai-8120.github.io/img/bg2.jpg) no-repeat center top;}
+.bg3{ background:#66CCFF url(https://ai-8120.github.io/img/bg3.jpg) no-repeat center top;}
+.bg4{ background:#66CCFF url(https://ai-8120.github.io/img/bg4.jpg) no-repeat center top;}
+.bg5{ background:#66CCFF url(https://ai-8120.github.io/img/bg5.jpg) repeat center top;}
+.bg6{ background:#66CCFF url(https://ai-8120.github.io/img/bg6.jpg) no-repeat center top;}
 #metro_box dl dt{ height:35px; line-height:35px;margin-bottom:20px;}
 #metro_box dl dt h1{ font-size:32px; font-family:"微软雅黑","黑体"; color:#fff; font-weight:normal; float:left;}
 #metro_box dl dt div{ float:right; font-size:12px;}
