@@ -1,7 +1,7 @@
 ﻿@charset "utf-8";
 /* CSS Document */
 *{ margin:0; padding:0;}
-body{ background:#66CCFF url(https://cdn.jsdelivr.net/gh/AI-8120/ServerdataforAI-8120/MapBed/pebg2.png) repeat center top; overflow:hidden;}
+body{ background:#66CCFF url(img/pebg1.png) repeat center top; overflow:hidden;}
 #metro_box dl dd ul{ width:990px; height:510px; overflow:hidden;}
 #metro_box dl dd ul li{width:240px; height:120px; overflow:hidden;  float:left; margin:3px;_margin:2px; _display:inline; padding:1px; opacity:0.9;filter:alpha(opacity=90); position:relative;}
 #metro_box dl dd ul li span{ display:none;}
